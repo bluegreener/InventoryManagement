@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dwhi219.view.AddModifyPartController">
+   <children>
+      <Label layoutX="43.0" layoutY="40.0" text="Inventory Management System" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="actionLabel" layoutX="40.0" layoutY="100.0">
+         <font>
+            <Font name="Segoe UI" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="343.0" layoutY="161.0" text="ID">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="313.0" layoutY="226.0" text="Name">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="337.0" layoutY="291.0" text="Inv">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="356.0" text="Price/Cost">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="327.0" layoutY="421.0" text="Max">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="653.0" layoutY="421.0" text="Min">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="companyNameLabel" layoutX="232.0" layoutY="486.0" text="Company Name">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inhouse" layoutX="383.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleRadioButtons" selected="true" text="In-House">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="partType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="outsourced" layoutX="534.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleRadioButtons" text="Outsourced" toggleGroup="$partType">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="partIdField" disable="true" layoutX="383.0" layoutY="155.0" promptText="Automatically generated">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="partNameField" layoutX="383.0" layoutY="220.0" prefHeight="35.0" prefWidth="548.0" promptText="Part name">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="inventoryField" layoutX="383.0" layoutY="285.0" promptText="Inventory count">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="priceField" layoutX="383.0" layoutY="350.0" promptText="Price/Cost per unit">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="maxField" layoutX="383.0" layoutY="415.0" promptText="Maximum allowed">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="minField" layoutX="706.0" layoutY="415.0" promptText="Minimum allowed">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="companyNameField" layoutX="383.0" layoutY="480.0" prefHeight="35.0" prefWidth="548.0" promptText="External company name">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </TextField>
+      <Label fx:id="machineIdLabel" layoutX="270.0" layoutY="486.0" text="Machine ID">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="machineIdField" layoutX="383.0" layoutY="480.0" promptText="Machine ID">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </TextField>
+      <ButtonBar layoutX="1066.0" layoutY="546.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="20.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#handleSave" text="Save">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleCancel" text="Cancel">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Button>
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
